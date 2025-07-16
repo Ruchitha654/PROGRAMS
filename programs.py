@@ -315,20 +315,217 @@
 #       temp=temp-1
 #       num=num+1
 #   print()
+
+
+
+# 16/07/2025
+# to print the 3d list 
+# a=[[[11,22,33],[44,55,66],[77,12,32]],[[41,42,43],[52,54,56],[98,97,95]]]
+# for i in range(2):
+#     for j in range(3):
+#         for k in range(3):
+#             print(a[i][j][k],end=" ")
+#         print()
+#     print()
+
+# grid 
+# grid=[[" " for i in range(10)]for i in range(10)]
+# for i in range(10):
+#     for j in range(10):
+#         if(j==0 or j==9):
+#             grid[i][j]="*"
+#         if(i==j and i<5):
+#             grid[i][j]="*"
+#         if(i+j==8 and i<5):
+#             grid[i][j]="*"
+# for i in range(10):
+#     for j in range(10):
+#         print(grid[i][j],end=" ")
+#     print()
+
+# need to get 5 names from user and 3 subjects marks from 1 student and display their names with percentage in the format of
+# import time
+# names=[] 
+# marks=[]   
+# for i in range(5):
+#     n=input("Enter the name{}".format(i+1))
+#     names.append(n)
+#     student=[]
+#     for j in range(3):
+#         m=int(input("Enter mark {}: " .format(j+1)))
+#         student.append(m)
+#     marks.append(student)
+    
+# per=[]
+# for i in marks:
+#     res=sum(i)//3
+#     per.append(res)
+
+# time.sleep(3)
+# print("-------------")
+# for i in range(5):
+    # print("{}.{} : {}".format(i+1,names[i],per[i]))
+        #   or
+# names=[]
+# sub=[]
+# per=[]
+# for i in range(5):
+#     a=input(f"Name {i+1}:")
+#     names.append(a)
+#     tot=0
+#     p=0
+#     for j in range(3):
+#         b=int(input(f"sub {j+1} mark:"))
+#         sub.append(b)
+#         tot=tot+b
+#     p=tot//3
+#     per.append(p)
+# print("----------------")
+# for i in range(5): 
+#     print(f"{i+1}. {names[i]} : {per[i]}%")
+# print()
+
+
+# MATCH (MAPPING)
+# n=int(input("enter the number of teams"))
+# teams=[]
+# for i in range(n):
+#     t=input("enter the team names:")
+#     teams.append(t)
+# meet=int(input("enter the number of meeting"))
+# match=[]
+# for i in range(n-1):
+#     for j in range(i+1,n):
+#         for k in range(meet):
+#             match.append([teams[i],teams[j]])
+# index=1
+# for i in match:
+#     print("{} vs {}".format(i[0],i[1]))
+
+
+# sort based on criteria
+# a=[10,11,"Zakir","Bala",123,44,53,"Anuj",20,46,7,"Jack"]
+# even=[]
+# odd=[]
+# alpha=[]
+# for i in a:
+#     if(type(i)==str):
+#         alpha.append(i)
+#     elif(i%2!=0):
+#         odd.append(i)
+#     elif(i%2==0):
+#         even.append(i)
+# odd.sort()
+# even.sort()
+# alpha.sort()   
+# print(odd+even+alpha)
+
+
+# the students with score greater than 5 and not in notorius gang 
+# notorious=["DHARSHAN","ANUJ","ROHIT"]
+# names=["ANU","DHARSHAN","ROHIT","JACK","PRIYA","BALA","RAI","RAM","RAJ","BEN"]
+# score=[2,5,6,8,3,5,6,9,8,2]
+# for i in range(len(names)):
+#     if score[i]>5:
+#         if names[i] not in notorious:
+#             print(names[i])
+            #  OR
+# notorious=["DHARSHAN","ANUJ","ROHIT"]
+# names=["ANU","DHARSHAN","ROHIT","JACK","PRIYA","BALA","RAI","RAM","RAJ","BEN"]
+# score=[2,5,6,8,3,5,6,9,8,2]
+# for i in range(len(names)):
+#     if(names[i] not in notorious and score[i]>5 ):
+#         print(names[i])
+
+
+# average of numbers in list , max mark is 100
+# a=[23,129,45,200,45,34,27,77,88,127]
+# for i in a:
+#     if(i>100):
+#         a.remove(i)
+# print(sum(a)/len(a))
+        
+# FLAMES
+# boy=input("Enter the name of a boy")
+# girl=input("enter the name of the girl")
+# a1=list(boy)
+# a2=list(girl)
+# for i in range(len(a1)):
+#     for j in range(len(a2)):
+#         if(a1[i]==a2[j]):
+#             a1[i]='2'
+#             a2[j]='2'
+# count=0
+# for i in a1: 
+#     if (i!='2'):
+#         count=count+1
+# for i in a2:
+#     if(i!='2'):
+#         count=count+1
+# print(count)
+# ans=['F','L','A','M','E','S']
+# index=0
+# while(len(ans)!=1):
+#     index=(index+(count-1))%len(ans)
+#     ans.pop(index)
+# print("The relation is",ans[0])
+   
+
+#computer  game
+# import random
+# name1=input("Enter the name of player 1")
+# name2=input("Enter the name of player 2")
+# print("Computer has fixed five numbers from the range 1 to 100")
+# print("You guys have to guess it.Ready???")
+# nums=[]
+# while(len(nums)!=5):
+#     d=random.randint(1,10)
+#     nums.append(d)
+# print("*********************")
+# s1=0
+# s2=0
+# player1=[]
+# player2=[]
+# for i in range(3):
+#     print("Dear {} , enter your choice".format(name1))
+#     ch=int(input())
+#     player1.append(ch)
+#     if(ch in nums):
+#         print("CORRECT")
+#         s1=s1+1
+#     else:
+#         print("WRONG")
+#     print("Dear {} , enter your choice".format(name2))
+#     ch=int(input())
+#     player2.append(ch)
+#     if(ch in nums):
+#         print("CORRECT")
+#         s2=s2+1
+#     else:
+#         print("WRONG")
+# print("numbers decided by comp {}".format(nums))
+# print("numbers guessed by {} : {}".format(name1,player1))
+# print("numbers guessed by {} : {}".format(name2,player2))
+# print("s1{}".format(s1))
+# print("s2{}".format(s2))
+# if(s1>s2):
+#     print("Player1 is winner")
+# else:
+#     print("player 2")
+
+
+# greed
+
+num=int(input("enter the amount"))
+n=int(input("number of notes"))
+for i in range(n):
+      a=print("enter the money lists")
+      n.append(a)
+n.sort()
+print(n)
         
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 
 
 
