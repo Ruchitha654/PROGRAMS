@@ -471,7 +471,7 @@
 # print("The relation is",ans[0])
    
 
-#computer  game
+# computer  game
 # import random
 # name1=input("Enter the name of player 1")
 # name2=input("Enter the name of player 2")
@@ -506,8 +506,8 @@
 # print("numbers decided by comp {}".format(nums))
 # print("numbers guessed by {} : {}".format(name1,player1))
 # print("numbers guessed by {} : {}".format(name2,player2))
-# print("s1{}".format(s1))
-# print("s2{}".format(s2))
+# print("s1: {}".format(s1))
+# print("s2: {}".format(s2))
 # if(s1>s2):
 #     print("Player1 is winner")
 # else:
@@ -590,52 +590,108 @@
 
 
 # firing employees
+names=["A","B","C","D","E","F","G","H","I","J"]
+memo=[0,1,1,1,2,2,1,2,1,2]
+salary=[1000,2000,3000,4500,2000,5000,1500,2300,1300,1100]
+l=[]
+res=list(zip(names,memo,salary))
+for i in res:  
+    if i[2]>4000:
+       res.remove(i)
+       l.append(i)
+print(l)
+s=sorted(res)
+print(res)
+for j in res:
+    if j[1]>1:
+        l.append(j)
+        res.remove(j)
+print(l)
+index=1
+for i in l:
+    print("{}.Name:{} salary :{}  memo:{}".format(index,i[0],i[2],i[1]))
+    index=index+1
+    
+    
+    
+# sirs code for firing 
 # names=["A","B","C","D","E","F","G","H","I","J"]
 # memo=[0,1,1,1,2,2,1,2,1,2]
 # salary=[1000,2000,3000,4500,2000,5000,1500,2300,1300,1100]
-# l=[]
-
-# res=list(zip(names,memo,salary))
-# for i in res:  
-#     if i[2]>4000:
-#        res.remove(i)
-#        l.append(i)
-# print(l)
-# s=sorted(res)
-# print(res)
-# for j in res:
-#     if j[1]>1:
-#         l.append(j)
-#         res.remove(j)
-# print(l)
-# index=1
-# for i in l:
-#     print("{}.Name:{} salary :{}  memo:{}".format(index,i[0],i[2],i[1]))
-#     index=index+1
-    
-    
-#  sirs code for firing 
-
-# remaining=[i for i in data if i[0]<4000]
-# # a=sorted(remaining.key=lambda x:x[0],reverse=True)
-# # index=0
-# #   i in a
-
+# data=list(zip(salary,memo,names))
+# removed1=[]
+# removed2=[]
+# for i in data:
+#   if(i[0]>4000):
+#     removed1.append(i)
+# remaining=[i for i in data if i[0]<4000]    
+# a=sorted(remaining,key=lambda x:x[0],reverse=True)
+# index=0
+# for i in a:
+#   if(i[1]>=2):
+#     removed2.append(i)
+#   if(len(removed2)>3):
+#     break
+# final=removed1+removed2
+# for i in final:
+#   print("{}.{} : Memo{}:salary {}".format(index,i[2],i[1],i[0]))
+#   index=index+1
 
 # to search for the missing element 
 # a=[1,3,7,6,2,4,5,9]
 # find the sum and subtract 
 
 # compressed form of string 
+# a="aaabbcccccaa"
+# c=1
+# res=""
+# for i in range(len(a)):
+#     if(i+1<len(a) and (a[i]==a[i+1])):
+#         c=c+1
+#     else:
+#         res=res+a[i]
+#         res=res+str(c)
+#         c=1
+# print(res)
 
-a="aaabbcccccaa"
-c=1
-res=""
-for i in range(len(a)):
-    if(i+1<len(a) and (a[i]==a[i+1])):
-        c=c+1
-    else:
-        res=res+a[i]
-        res=res+str(c)
-        c=1
-print(res)
+
+# to calculate the percentage and print the rank 
+# students = [
+#     {"name": "raju", "dept": "cse", "marks": [20, 30, 40]},
+#     {"name": "vijay", "dept": "cse", "marks": [10, 70, 43]},
+#     {"name": "pavi", "dept": "ece", "marks": [22, 38, 56]},
+#     {"name": "rose", "dept": "ece", "marks": [26, 36, 89]},
+#     {"name": "virat", "dept": "ece", "marks": [16, 90, 43]}
+# ]
+# for i in students:
+#     sum1=sum(i["marks"])
+#     per=sum1//3
+#     i["per"]=per
+# des=["FIRST","SECOND","THIRD","FOURTH","FIFTH"]
+# b=sorted(students,key=lambda x:x["per"], reverse=True)
+# index=1
+# for i in b:
+#      print("{}. {} stands {} : {}".format(index,i["name"],des[index-1],i["per"]))
+#      index=index+1
+
+
+# from datetime import datetime
+# a=input("Enter first date (YYYY -MM-DD):")
+# b=input("Enter first date (YYYY -MM-DD)")
+# d1=datetime.strptime(a,"%Y-%m-%d")
+# d2=datetime.strptime(b,"%Y-%m-%d")
+# diff=d2-d1
+# print("Difference:", abs(diff.days),"days")
+
+
+# from datetime import datetime
+# import pytz
+# a='Asia/Kolkata'
+# tz=pytz.timezone(a)
+# b=datetime.now(tz)
+# print(b)
+
+# from datetime import datetime
+# import pytz
+# for i in pytz.all_timezones:
+#     print(i)
