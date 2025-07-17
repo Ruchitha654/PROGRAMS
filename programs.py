@@ -514,18 +514,128 @@
 #     print("player 2")
 
 
-# greed
 
-num=int(input("enter the amount"))
-n=int(input("number of notes"))
-for i in range(n):
-      a=print("enter the money lists")
-      n.append(a)
-n.sort()
-print(n)
-        
     
- 
+    
+# name1 = input("Enter name ")
+# name2 = input("Enter name")
+# player1 = []
+# player2 = []
+# s1 = 0
+# s2 = 0
+# nums = []
+# while(len(nums)!=5):
+#     d=random.randint(1,10)
+#     nums.append(d)
+
+# for i in range(3):
+#     ch = input("Enter choice player1")
+#     if ch in nums:
+#         s1 += 1
+#         print("CORRECT")
+#         player1.append(ch)
+#     else:
+#         print("WRONG")
+#     while(ch in player1 or ch in player2):
+#         ch = input("Already done retry: ")
+        
+#     ch = input("Enter choice player2")
+#     if ch in nums:
+#         s2 += 1
+#         print("CORRECT")
+#         player2.append(ch)
+#     else:
+#         print("WRONG")
+#     while(ch in player1 or ch in player2):
+#         ch = input("Already done retry: ")
+        
+# if s1>s2:
+#     print("")
+
+
+# greed
+# coins=[500,200,100,50,20,10,5,2,1]
+# amount=int(input("Enter amount in rupees"))
+# for i in coins:
+#     while(amount>=i):
+#         print(i,end=" ")
+#         amount=amount-i
+        
 
 
 
+# 17.05.2025  
+
+# to get the sum of max and min digits of the input
+# a=int(input("enter number"))
+# b=int(input("enter number"))
+# l1=[int(i) for i in str(a)]
+# l2=[int(i) for i in str(b)]
+# r1=max(l1)+max(l2)
+# r2=min(l1)+min(l2)
+# print(r1+r2)
+
+
+# names=["a","b","c","d"]
+# marks=[20,40,50,60]
+# res=list(zip(names,marks))
+# print(res)
+
+
+# names=["a","b","c","d"]
+# marks=[100,45,32,67]
+# res=list(zip(names,marks))
+# q=sorted(res,key=lambda x:x[1])
+# print(q)
+
+
+# firing employees
+# names=["A","B","C","D","E","F","G","H","I","J"]
+# memo=[0,1,1,1,2,2,1,2,1,2]
+# salary=[1000,2000,3000,4500,2000,5000,1500,2300,1300,1100]
+# l=[]
+
+# res=list(zip(names,memo,salary))
+# for i in res:  
+#     if i[2]>4000:
+#        res.remove(i)
+#        l.append(i)
+# print(l)
+# s=sorted(res)
+# print(res)
+# for j in res:
+#     if j[1]>1:
+#         l.append(j)
+#         res.remove(j)
+# print(l)
+# index=1
+# for i in l:
+#     print("{}.Name:{} salary :{}  memo:{}".format(index,i[0],i[2],i[1]))
+#     index=index+1
+    
+    
+#  sirs code for firing 
+
+# remaining=[i for i in data if i[0]<4000]
+# # a=sorted(remaining.key=lambda x:x[0],reverse=True)
+# # index=0
+# #   i in a
+
+
+# to search for the missing element 
+# a=[1,3,7,6,2,4,5,9]
+# find the sum and subtract 
+
+# compressed form of string 
+
+a="aaabbcccccaa"
+c=1
+res=""
+for i in range(len(a)):
+    if(i+1<len(a) and (a[i]==a[i+1])):
+        c=c+1
+    else:
+        res=res+a[i]
+        res=res+str(c)
+        c=1
+print(res)
