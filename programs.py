@@ -699,5 +699,202 @@
 #     print(i)
 
 # to print the calender 
-import calendar
-print(calendar.calendar(2025))
+# import calendar
+# print(calendar.calendar(2025))
+
+
+    #  18.07.2025
+    
+# dict={'A':1,'B':10,'C':100,'D':1000,'E':10000,'F':100000}
+# ip="ABCFDAABC"
+# res=0
+# for i in ip:
+#     if(i in dict):
+#         res=res+dict[i]
+# print(res)
+
+
+# Shapes
+# def circle():
+#     r=int(input("enter the radius of the circle"))
+#     print("the area of circle is",3.14*r*r)
+# def square(s):
+#     print("the area of square is ",s*s)
+# def triangle():
+#     b=int(input("enter the base"))
+#     h=int(input("enter the height"))
+#     return 0.5*b*h
+# def rectangle(l,br):
+#     return l*br
+# a=1
+# while(a>0):
+#     print("1 Circle")
+#     print("2 Square")
+#     print("3 Triangle")
+#     print("4 Rectangle")
+#     print("5 EXIT")
+#     a=int(input("enter your choice"))
+#     match a:
+#         case 1:
+#             circle() 
+#         case 2:
+#             s=int(input("enter the side"))
+#             square(s)
+#         case 3:
+#             tri=triangle()
+#             print("the area of triangle is ",tri)
+#         case 4:
+#             l=int(input("enter the length"))
+#             br=int(input("enter the breadth"))
+#             rec=rectangle(l,br)
+#             print("the area of rectangle is ",rec)
+#         case 5:
+#             exit ()
+
+
+# to print coprime triplets
+# def cop(a , b):
+#     return gcd(a,b)==1
+# def gcd(a,b):
+#     while(b!=0):
+#        temp=a%b
+#        a=b
+#        b=temp
+#     return a
+    
+# n=int(input("enter the range"))
+# for i in range(1,n):
+#     for j in range(1,i):
+#         for k in range(1,j):
+#             if(k*k+j*j==i*i and cop(i,j) and cop(j,k) and cop(i,k)):
+#                 print(i,j,k)
+            
+# 3 digit prime numbers
+
+# def prime(i):
+#     if (i==1):
+#         return False
+#     for j in range(2,i):
+#         if(i%j==0):
+#            return False
+#     return True
+
+# def digi(i):
+#     while(i>0):
+#         d=i%10
+#         if(not prime(d)):
+#             return False
+#         i=i//10
+#         return True
+# def sumdigi(i):
+#     d=list(str(i))
+#     x=sum([int (i) for i in d])
+#     return prime(x)
+        
+            
+# for i in range(100,1000):
+#     if(prime(i) and digi(i) and sumdigi(i)):
+#         print(i,end=" ")
+            
+# bank
+# def deposit(amt,ch,Account):   
+#     Account[ch]+=amt
+#     print("the amount {} is deposited to account number {}".format(amt,ch)) 
+# def transfer(t_amt,t_acc):
+#     if Account[ch]<t_amt:
+#         print("No money")
+#     else:   
+#         Account[ch]-=t_amt
+#         Account[ch]+=t_amt 
+#     print("Amout {} trnasferred to { } from {}".format(t_amt,t_acc,Account_[ch]))
+# Account={101:1000,102:2000,103:3000}
+# ch=int(input("enter your account number"))
+# while(True):
+#     if(ch not in Account):
+#         print("Account not found")
+#     else:
+#         print("----BANK ACCOUNT DETAILS------")
+#         print("1 CHECK BALANCE")
+#         print("2 DEPOSIT ")
+#         print("3 TRANSFER")
+#         print("4 WITHDRAW")
+#         print("5 LOGOUT")
+#         a=int(input("Enter the choice"))
+#         match a:
+#             case 1:
+#                 print("balance is",Account[ch])
+#             case 2:
+#                 amt=int(input("enter the amount"))
+#                 deposit(amt,ch,Account)
+                
+#             case 3:
+#                 t_acc=int(input("enter the account number to transfer"))
+#                 if(t_acc not in Account):
+#                     print("Cant proceed , no acc ")
+#                 else:
+#                     t_amt=int(input("Enter the amount to transfer"))
+#                     transfer(t_acc,t_amt)
+#             case 4:
+#                 w_amt=int(input("Enter the amount to withdraw"))
+             
+            
+            
+# from tabulate import tabulate
+# headers = ["Name","Age","Department"]
+# data =[
+#     ["Ravi",25,"HR"],
+#     ["Anjali",30,"Finance"],
+#     ["Mohan",28,"IT"],
+#     ["Sneha",24,"HR"],
+#     ["Arun",32,"Logistics"]
+# ]
+# print(tabulate(data,headers=headers,tablefmt="fancy_grid"))
+
+    
+    
+# headers = ["Name","Age","Department"]
+# data =[
+#     ["Ravi",25,"HR"],
+#     ["Anjali",30,"Finance"],
+#     ["Mohan",28,"IT"],
+#     ["Sneha",24,"HR"],
+#     ["Arun",32,"Logistics"]
+# ]   
+# print(f"{headers[0]:<12}{headers[2]:<15}") 
+# print("*" * 30)
+# for row in data:
+#     print(f"{row[0]:<12}{row[1]:<5}{row[2]:<15}")
+#     print("-" * 30)
+
+# Ishita is a curious girl and one day she decides to check whether a number is prime or not. so she wants to write an algorithm 
+# to determine  if a number N is round or not. A round number is a number defined by the following process:
+#     -First starting with any positive integer,replace the number by the sum of the squares of its digits.
+#     -Repeat the process until the number equals 1(where it will stay),or it loops endlessly in a cycle which does not include 1
+#     -Those numbers for which this process ends in 1 are round numbers.
+#     Return true if N is a rounded number false is not.
+     
+
+
+def numprime(i):
+    if(i==1):
+        return False
+    for j in range(2,i): 
+        if(i%j==0):
+            return False
+    return True
+        
+def sumprime(i):
+    d=list(str(i))
+    x=sum([int (i) for i in d])
+    return numprime(x)
+def digprime(i):
+    while(i>0):
+        d=i%10
+        if(not numprime(d)):
+            return False
+        i=i//10
+    return True     
+for i in range(100,1000):
+    if(numprime(i) and sumprime(i) and digprime(i)):
+        print(i,end=" ") 
+
