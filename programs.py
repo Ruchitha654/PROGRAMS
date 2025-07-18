@@ -697,3 +697,7 @@
 # import pytz
 # for i in pytz.all_timezones:
 #     print(i)
+
+# to print the calender 
+import calendar
+print(calendar.calendar(2025))
