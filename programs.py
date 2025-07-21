@@ -996,7 +996,72 @@
 # n=int(input("enter the number"))
 # print(fact(n))
 
+# NQUEENS
+# def print_board(board):
+#     for row in board:
+#         print(" ".join(row))
+#     print()
+# def safe(board,row,col,n):
+#     for i in range(row):
+#         if board[i][col]=="Q":
+#             return False
+#     i=row-1
+#     j=col-1
+#     while (i>=0 and j>=0):
+#         if(board[i][j]=="Q"):
+#             return False
+#         i=i-1
+#         j=j-1
+    
+#     i=row-1
+#     j=col+1
+#     while i>=0 and j<n:
+#         if(board[i][j]=="Q"):
+#             return False
+#         i=i-1
+#         j=j+1
+        
+#     return True   
+    
+    
+# def solve(board,row,n):
+#     if row==n:
+#         print_board(board)
+#         return 
+#     for col in range(n):
+#         if (safe(board,row,col,n)):
+#             board[row][col]="Q"
+#             solve(board,row+1,n)
+#             board[row][col]="."      
+
+# n=4
+# board=[["." for _ in range(n)]for _ in range(n)]
+# solve(board,0,n)
 
 
+# TOWER OF HANOII
+# def tower(disk,source,auxi,dest):
+#     if(disk==1):
+#         print("move {} from {} to {}".format(disk,source,dest))
+#         return
+#     else:
+#         tower(disk-1,source,dest,auxi)
+#         print("move {} from {} to {}".format(disk,source,dest))
+#         tower(disk-1,auxi,source,dest)
+
+# disk=int(input("Enter any number: "))
+# print("Steps involved are")
+# tower(disk,'A','B','C')
 
 
+# Fibonacci
+# def fibo(n):
+#     if(n==0):
+#         return 0
+#     elif(n==1):
+#         return 1
+#     else:
+#         return fibo(n-1)+fibo(n-2)
+# a=int(input("enter any number"))
+# for i in range(a):
+#     print(fibo(i),end=" ")
