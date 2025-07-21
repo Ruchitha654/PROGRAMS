@@ -760,41 +760,43 @@
 #        temp=a%b
 #        a=b
 #        b=temp
-#     return a
-    
+#     return a    
 # n=int(input("enter the range"))
 # for i in range(1,n):
 #     for j in range(1,i):
 #         for k in range(1,j):
 #             if(k*k+j*j==i*i and cop(i,j) and cop(j,k) and cop(i,k)):
 #                 print(i,j,k)
+ 
             
 # 3 digit prime numbers
 
-# def prime(i):
-#     if (i==1):
+# def numprime(i):
+#     if(i==1):
 #         return False
-#     for j in range(2,i):
+#     for j in range(2,i): 
 #         if(i%j==0):
-#            return False
-#     return True
-
-# def digi(i):
-#     while(i>0):
-#         d=i%10
-#         if(not prime(d)):
 #             return False
-#         i=i//10
-#         return True
-# def sumdigi(i):
+#     return True
+        
+# def sumprime(i):
 #     d=list(str(i))
 #     x=sum([int (i) for i in d])
-#     return prime(x)
-        
-            
+#     return numprime(x)
+# def digprime(i):
+#     while(i>0):
+#         d=i%10
+#         if(not numprime(d)):
+#             return False
+#         i=i//10
+#     return True     
 # for i in range(100,1000):
-#     if(prime(i) and digi(i) and sumdigi(i)):
-#         print(i,end=" ")
+#     if(numprime(i) and sumprime(i) and digprime(i)):
+#         print(i,end=" ") 
+
+
+
+
             
 # bank
 # def deposit(amt,ch,Account):   
@@ -866,35 +868,135 @@
 #     print(f"{row[0]:<12}{row[1]:<5}{row[2]:<15}")
 #     print("-" * 30)
 
+
+# 19.07.2025
+
 # Ishita is a curious girl and one day she decides to check whether a number is prime or not. so she wants to write an algorithm 
 # to determine  if a number N is round or not. A round number is a number defined by the following process:
 #     -First starting with any positive integer,replace the number by the sum of the squares of its digits.
 #     -Repeat the process until the number equals 1(where it will stay),or it loops endlessly in a cycle which does not include 1
 #     -Those numbers for which this process ends in 1 are round numbers.
 #     Return true if N is a rounded number false is not.
-     
+    
+    
+# n=int(input("Enter any number"))
+# l=[]
+# while(n not in l):
+#     l.append(n)
+#     n=sum([int (i)* int(i) for i in str(n)])
+# if(n==1):
+#     print("ROUND NUMBER")
+# else:
+#     print("Not")
 
 
-def numprime(i):
-    if(i==1):
-        return False
-    for j in range(2,i): 
-        if(i%j==0):
-            return False
-    return True
-        
-def sumprime(i):
-    d=list(str(i))
-    x=sum([int (i) for i in d])
-    return numprime(x)
-def digprime(i):
-    while(i>0):
-        d=i%10
-        if(not numprime(d)):
-            return False
-        i=i//10
-    return True     
-for i in range(100,1000):
-    if(numprime(i) and sumprime(i) and digprime(i)):
-        print(i,end=" ") 
+
+# spiral
+# matrix=[[1,2,3,4],
+#         [5,6,7,8],
+#         [9,1,2,3],
+#         [4,5,6,7],
+#         [8,9,10,11]]
+# cols=len(matrix[0])
+# rows=len(matrix)
+# left=0
+# top=0
+# right=cols-1
+# bottom=rows-1
+# while(top<=bottom and left<=right):
+    
+#     for i in range(left,right+1):
+#         print(matrix[top][i],end=" ")
+#     top=top+1
+    
+    
+#     for i in range(top,bottom+1):
+#         print(matrix[i][right],end=" ")
+#     right=right-1
+    
+   
+    
+#     for i in range(right,left-1,-1):
+#         print(matrix[bottom][i],end=" ")
+#     bottom=bottom-1
+    
+    
+#     for i in range(bottom,top-1,-1):
+#         print(matrix[i][left],end=" ")
+#     left=left+1
+   
+    
+    # this code works for 3*3 matrx also , whereas the previous one doesnt 
+# matrix=[[1,2,3,4],
+#         [5,6,7,8],
+#         [9,1,2,3],
+#         [4,5,6,7],
+#         [8,9,10,11]]
+# cols=len(matrix[0])
+# rows=len(matrix)
+# left=0
+# top=0
+# right=cols-1
+# bottom=rows-1
+# while(top<=bottom and left<=right):
+    
+#     for i in range(left,right+1):
+#         print(matrix[top][i],end=" ")
+#     top=top+1
+    
+    
+#     for i in range(top,bottom+1):
+#         print(matrix[i][right],end=" ")
+#     right=right-1
+    
+#     if(top<=bottom):
+#         for i in range(right,left-1,-1):
+#              print(matrix[bottom][i],end=" ")
+#         bottom=bottom-1
+
+#     if(left<=right):
+#         for i in range(bottom,top-1,-1):
+#              print(matrix[i][left],end=" ")
+#         left=left+1
+   
+    
+    
+    # 21.07.2025
+    # prime factorization
+    
+# def factor(n):
+    
+#     for i in range(2,n+1):
+#         if(n%i==0):
+#             print(i)
+#             factor(n//i)
+#             break
+    
+# n=int(input("enter the number"))
+# factor(n)
+    # OR
+# def factor(n):
+#     if n==1:
+#         return
+#     i=2
+#     while(n%i!=0):
+#         i=i+1
+#     print(i,end=" ")
+#     factor(n//i)
+# n=int(input("enter the number"))
+# factor(n)
+
+
+# FACTORIAL 
+# def fact(n):
+#     if(n<=1):
+#         return 1
+#     else:
+#         return n*fact(n-1)
+# n=int(input("enter the number"))
+# print(fact(n))
+
+
+
+
 
