@@ -1065,3 +1065,120 @@
 # a=int(input("enter any number"))
 # for i in range(a):
 #     print(fibo(i),end=" ")
+
+# 22.7.2025
+# classes and objects
+
+# class Rectangle:
+#     info1="*Sum of angle is 360 degree" 
+#     info2="*Each angle is 90 degree"
+#     def calculate(self):
+#         length=int(input("Enter the length of rectagle"))
+#         self.length=length
+#         breadth=int(input("Enter the breadth of rectangle"))
+#         self.breadth=breadth
+#         Area=length*breadth
+#         print("The area of the rectangle is {}".format(Area))
+#         Perimeter=2*(length+breadth)
+#         print("The perimeter of the rectangle is {}" .format(Perimeter))
+# print(Rectangle.info1)
+# print(Rectangle.info2)
+# r1=Rectangle()
+# r2=Rectangle()
+# r1.calculate()
+# r2.calculate()
+
+# class rect:
+#     prop1="Sum of angle is 360 degree"
+#     prop2="Each angle is 90 degree"
+#     def get_info(self):
+#         a=int(input("enter the length of rectangle"))
+#         b=int(input("enter the breadth"))
+#         self.len=a
+#         self.breadth=b
+#     def area(self):
+#         print(self.len*self.breadth)
+#     def perimeter(self):
+#         print((self.len+self.breadth)*2)
+        
+# print("The Rectangle Properties")
+# print(rect.prop1)
+# print(rect.prop2)
+# a1=rect()
+# a2=rect()
+# a1.get_info()
+# a2.get_info()
+# a1.area()
+# a1.perimeter()
+# a2.area()
+# a2.perimeter()
+            
+        
+        # CONSTRUCTOR
+        
+# class india:
+#     def __init__(self,name):
+#         self.name=name
+#     def display(self):
+#         print("{} is good player" .format(self.name))
+
+# a1=india("SACHIN")
+# a1.name="RUCHI"
+# a1.display()
+
+#              LIST AND OOPS
+# class rect:
+#     def set_dim(self,a,b):
+#         self.a=a
+#         self.b=b
+        
+#     def area(self):
+#         return self.a*self.b
+# nums=[]
+
+# d=int(input("Enter the number"))
+# for i in range(d):
+#     R=rect()
+#     a=int(input("enter the length"))
+#     b=int(input("enter the breadth"))
+#     R.set_dim(a,b)
+#     nums.append(R)
+# index=0
+# for  i in nums:
+#       print("The area of {}: is {}" .format(index,i.area()))
+#       index=index+1
+
+
+# extra concepts 
+# nums[9].area   = to print 10th rectangle area
+# i.a  == to print the length of rectangles only
+# if(i.area()%2==0):    ===to print the even areas only 
+    # print(i.area())
+# R=rect(random.randint(1,5).random.randint(5,10))
+      
+     
+class rect:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def set_dim(self,a,b):
+        self.a=a
+        self.b=b     
+    def area(self):
+        return self.a*self.b
+nums=[]
+d=int(input("Enter the number"))
+for i in range(d):
+    R=rect(i+10,i+20)
+    a=int(input("enter the length"))
+    b=int(input("enter the breadth"))
+    R.set_dim(a,b)
+    nums.append(R)
+index=0
+for  i in nums:
+      print("The area of {}: is {}" .format(index,i.area()))
+      index=index+1
+ 
+      
+      
+    
