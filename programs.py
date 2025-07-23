@@ -1157,28 +1157,120 @@
 # R=rect(random.randint(1,5).random.randint(5,10))
       
      
-class rect:
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
-    def set_dim(self,a,b):
-        self.a=a
-        self.b=b     
-    def area(self):
-        return self.a*self.b
-nums=[]
-d=int(input("Enter the number"))
-for i in range(d):
-    R=rect(i+10,i+20)
-    a=int(input("enter the length"))
-    b=int(input("enter the breadth"))
-    R.set_dim(a,b)
-    nums.append(R)
-index=0
-for  i in nums:
-      print("The area of {}: is {}" .format(index,i.area()))
-      index=index+1
+# class rect:
+#     def __init__(self,a,b):
+#         self.a=a
+#         self.b=b
+#     def set_dim(self,a,b):
+#         self.a=a
+#         self.b=b     
+#     def area(self):
+#         return self.a*self.b
+# nums=[]
+# d=int(input("Enter the number"))
+# for i in range(d):
+#     R=rect(i+10,i+20)
+#     a=int(input("enter the length"))
+#     b=int(input("enter the breadth"))
+#     R.set_dim(a,b)
+#     nums.append(R)
+# index=0
+# for  i in nums:
+#       print("The area of {}: is {}" .format(index,i.area()))
+#       index=index+1
  
       
-      
+# EMPLOYEEEE
+# class emp:
+#     tax=10
+#     company="COGNIZANT"  
+#     profit=100000
+#     def __init__ (self,name,age,salary,per):
+#         self.name=name
+#         self.age=age
+#         self.salary=salary
+#         self.per=per
+#     def cal_tax(self):
+#         return ((emp.tax/100)*self.salary)
+#     def cal_share(self):
+#         return ((self.per/100)*emp.profit)
+#     def display(self):
+#         print("Company:{}".format(emp.company))
+#         print("Name:{}".format(self.name))
+#         print("Age:{}".format(self.age))
+#         print("Salary:{}".format(self.salary))
+#         print("tax:{}".format(self.cal_tax()))
+#         print("Share:{}".format(self.cal_share()))
+# s1=emp("Ruchi",21,80000,5)
+# s1.display()
+# print("------------------------------")
+# s2=emp("Ruchitha",30,150000,6)
+# s2.display()
+        
+# class A:
+#     x = 10
+#     def _init_(self):
+#         self.x=self.x+1
+# a1=A()
+# A.x=A.x+5
+# a2=A()
+# print(a1.x,a2.x,A.x)
+        
+# class Test:
+#     a = 5
+#     def __init__(self):
+#         self.a = self.a + 2
+        
+#     def abc(self,a):
+#         res=1
+#         for i in range(2,a):
+#             res=res+i
+#         return res
+# t = Test()
+# print(t.abc(t.a))
+
+# class Demo:
+#     count = 0
+#     def __init__(self):
+#         self.a=20
+#         if(Demo.count==2):
+#             Demo.count+=self.a
+#         else:
+#             Demo.count+=1
+# d1 = Demo()
+# d2 = Demo()
+# d3 = Demo()
+# d3.count = 10
+
+# print(d1.count, d2.count, d3.count)
+            
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+d1 = Demo()
+
+d2 = Demo()
+
+d3 = Demo()
+
+
+
+
     
