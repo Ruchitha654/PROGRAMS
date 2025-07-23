@@ -1241,10 +1241,55 @@
 # d2 = Demo()
 # d3 = Demo()
 # d3.count = 10
-
 # print(d1.count, d2.count, d3.count)
+
+
+# 23.07.2025
+# inheritance
+# def add_numbers(*args):
+#     sum=0
+#     for i in args:
+#         sum=sum+i
+#     print(sum)
+# add_numbers(10,20)
+# add_numbers(5,10,15,20)
             
+            # SUPER KEYWORD
+# class Vehicle:
+#     def __init__(self,brand,fuel_type):
+#         self.brand=brand
+#         self.fuel_type=fuel_type
+#     def display_info(self):
+#         print(f"Brand  :{self.brand}")
+#         print(f"fuel type  :{self.fuel_type}")
+# class Car(Vehicle):
+#     def __init__(self,brand,fuel_type,model):
+#         super().__init__(brand,fuel_type)
+#         self.model=model
+#     def display_details(self):
+#         self.display_info()
+#         print(f"Model  :{self.model}")
+# c=Car("Toyota","Petrol","Innova")
+# c.display_details()
+# c.display_info()
 
+# a monkey has to climb the post of "x" meters , every minute it climbs "a" meters and in the next minute it slides down by "b" minutes. find the total time taken by the monkey to reach top
+def cal(x,a,b):
+    m=0
+    while x>0 :
+        x=x-a
+        m=m+1
+        if x==0:
+            return m
+        x=x+b
+        m=m+1
+    return m
+print(cal(25,7,4))
+print(cal(30,10,5))
+        
+    
+    
+    
     
 
 
@@ -1255,6 +1300,7 @@
 
 
 
+
     
 
 
@@ -1262,13 +1308,6 @@
 
 
 
-
-
-d1 = Demo()
-
-d2 = Demo()
-
-d3 = Demo()
 
 
 
