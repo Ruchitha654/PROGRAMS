@@ -1,0 +1,2 @@
+Name: ruchitha, Email: ruchi@gmail.com, Password: 123, Gender: female
+Name: r, Email: r@gmail.com, Password: 123, Gender: F
