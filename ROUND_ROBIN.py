@@ -17,8 +17,6 @@ def find(task, time):
             count += 1
     print("Total number of runs completed is", count)
             
-
 task = [10, 5, 8]
 time = 4
-
 find(task, time)
