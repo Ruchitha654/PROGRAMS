@@ -1287,20 +1287,21 @@
 # print(cal(25,7,4))
 # print(cal(30,10,5))
         
-def nitte(n):
-    c=0
-    if(n<=1):
-        return
-    for i in range(n):
-        nitte(i)
-        print("Hai")
-        c=c+2
-    print(c)
+# def nitte(n):
+#     c=0
+#     if(n<=1):
+#         return
+#     for i in range(n):
+#         nitte(i)
+#         print("Hai")
+#         c=c+2
+#     print(c)
 
-b=nitte(3)
-print(b)
+# b=nitte(3)
+# print(b)
     
     
+
     
 
 
